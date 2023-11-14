@@ -8,15 +8,19 @@
 
 <body>	
 	<script>
+		  let largest = -Infinity;
+		let second=-Infinity;
 		function secondHighest(arr) {
 			  
-				  let largest = arr[0];
-				  let second;
+				
 				  for (let i = 1; i < arr.length; i++) {
 				    if (arr[i] > largest) {
 				      second = largest;
 				      largest = arr[i];
 				    }
+					else if (arr[i] > second && arr[i] !== largest) {
+      second = arr[i];
+    }
 				  }
 				  // console.log(second);
 				  return second;
